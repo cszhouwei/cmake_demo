@@ -6,4 +6,4 @@ INCLUDE_DIRECTORIES(${CMAKE_BINARY_DIR}/proto/)
 AUX_SOURCE_DIRECTORY(. DIR_SRCS)
 
 ADD_EXECUTABLE(module_yyy ${DIR_SRCS})
-TARGET_LINK_LIBRARIES(module_yyy public proto l5_api)
+TARGET_LINK_LIBRARIES(module_yyy public proto l5_api boost_thread)
