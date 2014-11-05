@@ -8,4 +8,8 @@ a demo project showing basic cmake usage
 
 ` CFLAGS=-m32 CXXFLAGS=-m32 cmake -DCMAKE_BUILD_TYPE=Debug ../ `
 
-` make; make test `
+` make `
+
+` ctest `
+
+` ctest -R account `

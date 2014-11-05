@@ -37,19 +37,21 @@ ExternalProject_Add(
     )
 
 ExternalProject_Add(
-    gtest_proj
-    SVN_REPOSITORY http://googletest.googlecode.com/svn/trunk/
+    gmock_proj
+    SVN_REPOSITORY http://googlemock.googlecode.com/svn/trunk/
     SVN_REVISION -r HEAD
-    SVN_USERNAME warezhou
-    SVN_PASSWORD HPLE1901w1
-    CMAKE_ARGS ${CMAKE_FLAGS}
+    #SVN_USERNAME
+	#SVN_PASSWORD
+	CMAKE_ARGS ${CMAKE_FLAGS}
     INSTALL_DIR ${EXTLIB_INSTALL_PREFIX}
     INSTALL_COMMAND ""
     )
-ExternalProject_Get_Property(gtest_proj SOURCE_DIR)
-SET(GTEST_INC ${SOURCE_DIR}/include)
-ExternalProject_Get_Property(gtest_proj BINARY_DIR)
-SET(GTEST_LIB ${BINARY_DIR})
+ExternalProject_Get_Property(gmock_proj SOURCE_DIR)
+SET(GMOCK_INC ${SOURCE_DIR}/include)
+SET(GTEST_INC ${SOURCE_DIR}/gtest/include)
+ExternalProject_Get_Property(gmock_proj BINARY_DIR)
+SET(GMOCK_LIB ${BINARY_DIR})
+SET(GTEST_LIB ${BINARY_DIR}/gtest)
 
 ADD_SUBDIRECTORY(libattrapi)
 
