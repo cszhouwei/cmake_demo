@@ -40,8 +40,8 @@ ExternalProject_Add(
     gtest_proj
     SVN_REPOSITORY http://googletest.googlecode.com/svn/trunk/
     SVN_REVISION -r HEAD
-    #SVN_USERNAME
-    #SVN_PASSWORD
+    SVN_USERNAME warezhou
+    SVN_PASSWORD HPLE1901w1
     CMAKE_ARGS ${CMAKE_FLAGS}
     INSTALL_DIR ${EXTLIB_INSTALL_PREFIX}
     INSTALL_COMMAND ""

@@ -5,7 +5,7 @@
 
 int main(int argc, char *argv[])
 {
-    test_func();
+    std::cout << "Factorial(5)=" << Factorial(5);
     std::cout << demo::Request().DebugString();
     Attr_API(0, 1);
     return 0;

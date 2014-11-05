@@ -1,0 +1,8 @@
+FIND_PACKAGE(extlib REQUIRED)
+
+AUX_SOURCE_DIRECTORY(../src TEST_SRCS)
+AUX_SOURCE_DIRECTORY(. DIR_SRCS)
+ADD_EXECUTABLE(test_public ${TEST_SRCS} ${DIR_SRCS})
+TARGET_LINK_LIBRARIES(test_public gtest gtest_main)
+
+ADD_TEST(test_public test_public)
