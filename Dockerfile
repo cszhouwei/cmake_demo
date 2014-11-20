@@ -1,4 +1,5 @@
 #https://github.com/crashsystems/gitlab-docker/blob/master/Dockerfile
+#https://github.com/widuu/chinese_docker/blob/master/userguide/dockerimages.md
 
 FROM ubuntu
 
@@ -7,7 +8,7 @@ MAINTAINER Wei Zhou <cszhouwei@gmail.com>
 RUN apt-get update; \
     apt-get -y upgrade
 
-RUN apt-get -y install g++ cmake git
+RUN apt-get -y install g++ cmake git subversion
 
 RUN mkdir /home/git; \
     cd /home/git; \
